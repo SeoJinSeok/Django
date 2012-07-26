@@ -1,0 +1,22 @@
+<h1><strong>{{page_title}}</strong></h1>
+<p> 안녕 여러분.</p> <p>이 내용은 list.hml에 있는 거야</p> <p>
+-----------------------------------------------------------------
+{% for entry in entries %}
+<div>
+<h3><a href="/blog/entry/{{entry.id}}"  href="/blog/entry/{{entry.id}}">{{entry.Title}}</a></h3>
+<ul>
+<li>{{entry.Category.Title}}</li>
+<li>{% for tag in entry.Tags.all %}
+<span>{{tag.Title}}</span>
+{% endfor %}</li>
+<li>{{entry.created}}</li>
+</ul>
+<div>{{entry.Content}}</div>
+</div>
+{% endfor %}
+{% for d in entries %}
+<div>
+<h3>
+<a href="/blog/page/{{page}}" href="/blog/page/{{page}}">[{{page}}]
+</a></h3>
+{% endfor %}

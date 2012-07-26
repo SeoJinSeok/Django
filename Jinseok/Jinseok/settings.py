@@ -106,6 +106,7 @@ ROOT_URLCONF = 'Jinseok.urls'
 WSGI_APPLICATION = 'Jinseok.wsgi.application'
 
 TEMPLATE_DIRS = (
+    "c:\users\x180\django\jinseok\blog\templates"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -118,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
     'blog',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
@@ -153,3 +155,4 @@ LOGGING = {
         },
     }
 }
+FILE_CHARSET='euc-kr'
