@@ -1,22 +1,23 @@
-# Django settings for Jinseok project.
+# -*- coding: cp949 -*-
+# Django settings for jinseok2 project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Seo Jin Seok', 'alimm23@naver.com'),
+    # ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default' : {
-        'ENGINE': 'django.db.backends.sqlite3', 
-        'NAME': 'testing',                     
-        'USER': 'Jinseok',                     
-        'PASSWORD': '4018',                
-        'HOST': '',                    
-        'PORT': '',                      
+    'default': {
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -81,7 +82,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'c*u_985gih#^qpzcc*o^1lc0(jf_r_4odhq@ufam6lli@rzv_d'
+SECRET_KEY = ')gjgqkjtgar)tkx=^*4tfi2ypmso#1*oo0i@ohcyiw9vnfr$0m'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -100,12 +101,13 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Jinseok.urls'
+ROOT_URLCONF = 'jinseok2.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'Jinseok.wsgi.application'
+WSGI_APPLICATION = 'jinseok2.wsgi.application'
 
 TEMPLATE_DIRS = (
+    'C:/Users/¼­Á¤½Ä/Django/Jinseok2/Templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -118,7 +120,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
