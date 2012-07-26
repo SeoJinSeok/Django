@@ -154,3 +154,4 @@ LOGGING = {
         },
     }
 }
+FILE_CHARSET = 'euc-kr' 
