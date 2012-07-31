@@ -24,3 +24,4 @@ class Comments(models.Model):
        Content = models.TextField(max_length=2000, null=False)
        created = models.DateTimeField(auto_now_add=True, auto_now=True)
 Entry = models.ForeignKey(Entries)
+

@@ -1,0 +1,4 @@
+<h3>
+<a href="/blog/page/{{page}}" href="/blog/page/{{page}}">[{{current_page}}]
+</a></h3>
+</div>
