@@ -1,21 +1,21 @@
-# Django settings for Jinseok project.
+# Django settings for test2 project.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Seo Jin Seok', 'alimm23@naver.com'),
+    # ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default' : {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'jinseok',                     
-        'USER': 'root',                     
-        'PASSWORD': 'emfaks23',                
-        'HOST': '',                    
-        'PORT': '',                      
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'jinseok',                      # Or path to database file if using sqlite3.
+        'USER': 'root',                      # Not used with sqlite3.
+        'PASSWORD': 'emfaks23',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -80,7 +80,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'c*u_985gih#^qpzcc*o^1lc0(jf_r_4odhq@ufam6lli@rzv_d'
+SECRET_KEY = 'g%n8*s01wb)gy-ebwns(zu-l9ha5^ff)bz+!k0s17k#vepxw)i'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -99,27 +99,27 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Jinseok.urls'
+ROOT_URLCONF = 'test2.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'Jinseok.wsgi.application'
+WSGI_APPLICATION = 'test2.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "c:\users\x180\django\jinseok\blog\templates"
+    "c:/users/x180/django/test2/a"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
 
 INSTALLED_APPS = (
+    'tastypie',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'blog',
+    'a'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -154,4 +154,3 @@ LOGGING = {
         },
     }
 }
-FILE_CHARSET='euc-kr'

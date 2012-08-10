@@ -22,7 +22,7 @@ def index(request, page=1):
     'current_page':page,
     'page':d,
     })
-    return HttpResponse(tpl.render(ctx))
+    return HttpResponse(tpl.render(ctx))    
 
 def read(request, entry_id=None):
     page_title = '블로그 글 읽기 화면'
@@ -36,13 +36,23 @@ def read(request, entry_id=None):
         next_entry = current_entry.get_next_by_created()
     except:
         next_entry = None
-    return HttpResponse('안녕, 여러분. [%d]번 글은 [%s]이야.' % (current_entry.id, current_entry.Title.encode('utf-8')))
 
     tpl = loader.get_template('read.html')
-    ctx = Context({
-    'page_title':page_title,
-    'current_entry':current_entry,
-    'prev_entry':prev_entry,
-    'next_entry':next_entry
+    ctx = Context({'page_title':page_title,
+        'current_entry':current_entry,
+        'prev_entry':prev_entry,
+        'next_entry':next_entry
     })
     return HttpResponse(tpl.render(ctx))
+
+def write_form(request):
+    page_title = '블로그 글 쓰기 화면'
+    tpl = loader.get_template('write.html')
+    ctx = Context({
+        'page_title':page_title
+    })
+    return HttpResponse(tpl.render(ctx))
+
+def add_post(request):
+    entry_title = request.POST['title']
+    return HttpResponse('hello %s' % entry_title)

@@ -14,24 +14,8 @@
 <div>{{entry.Content}}</div>
 </div>
 {% endfor %}
-{% for page in Pages %}
-    {# Each "contact" is a Contact model object. #}
-    {{ contact.full_name|upper }}<br />
-    ...
-{% endfor %}
 
-<div class="Entries">
-    <span class="step-links">
-        {% if contacts.has_previous %}
-            <a href="/blog/page/{ current_page }">previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ page }} of {{ current_page }}.
-        </span>
-
-        {% if contacts.has_next %}
-            <a href="/blog/page/{ page }">next</a>
-        {% endif %}
-    </span>
+<div>
+<h3><a href="/blog/page/{{page}}" href="/blog/page/{{page}}">[{{current_page}}]
+<a/></h3>
 </div>
