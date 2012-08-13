@@ -1,4 +1,5 @@
-# Django settings for test2 project.
+# Django settings for tasty project.
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -14,7 +15,7 @@ DATABASES = {
         'NAME': 'jinseok',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': 'emfaks23',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
@@ -80,7 +81,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'g%n8*s01wb)gy-ebwns(zu-l9ha5^ff)bz+!k0s17k#vepxw)i'
+SECRET_KEY = '7sd#!8xqi7e-3(8(0cu8-)+qmh1%zxbea8i1h6w1t8v)mgcry)'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -99,13 +100,12 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'test2.urls'
+ROOT_URLCONF = 'tasty.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'test2.wsgi.application'
+WSGI_APPLICATION = 'tasty.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "c:/users/x180/django/test2/a"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -113,13 +113,14 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'tastypie',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'a'
+    'blog',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

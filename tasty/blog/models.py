@@ -1,4 +1,4 @@
-from tastypie.utils.timezone import now
+import datetime
 from django.contrib.auth.models import User
 from django.db import models
 from django.template.defaultfilters import slugify
@@ -6,7 +6,7 @@ from django.template.defaultfilters import slugify
 
 class Entry(models.Model):
     user = models.ForeignKey(User)
-    pub_date = models.DateTimeField(default=now)
+    pub_date = models.DateTimeField(default=datetime.datetime.now)
     title = models.CharField(max_length=200)
     slug = models.SlugField()
     body = models.TextField()
