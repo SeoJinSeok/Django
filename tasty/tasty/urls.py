@@ -11,7 +11,7 @@ v1_api.register(UserResource())
 v1_api.register(EntryResource())
 
 urlpatterns = patterns('',
-    # The normal jazz here...
+    # The normal jazz here...,
     (r'^api/', include(v1_api.urls)),
     # Examples:
     # url(r'^$', 'tasty.views.home', name='home'),

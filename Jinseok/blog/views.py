@@ -2,6 +2,15 @@
 from django.http import HttpResponse
 from models import Entries
 from django.template import Context, loader
+from django.views.decorators.csrf import csrf_protect
+from django.shortcuts import render
+
+@csrf_protect
+def my_view(request):
+    c = {}
+    # ...
+    return render(request, "a_template.html", c)
+
 
 def index(request, page=1):
     page = int(page)
@@ -55,4 +64,6 @@ def write_form(request):
 
 def add_post(request):
     entry_title = request.POST['title']
+    if request.POST.has_key('title1') == False:
+        return HttpResponse('글 제목을 입력해야 한다우.')
     return HttpResponse('hello %s' % entry_title)
